@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
   s.platform         = :ios, '9.0'
   s.source_files = 'Sources/include/SmAntiFraud/SmAntiFraud.h'
   s.frameworks = 'SystemConfiguration', 'Security', 'AdSupport', 'CoreMotion', 'CoreLocation'
-  s.libraries = 'resolv', 'z', 'sqlite3.0', 'smantifraud'
+  s.libraries = 'resolv', 'z', 'sqlite3.0'
   s.vendored_libraries = 'Sources/libSmAntiFraud.a'
   s.pod_target_xcconfig    = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' }
   s.user_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' }
