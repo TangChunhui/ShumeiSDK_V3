@@ -27,17 +27,13 @@ TODO: Add long description of the pod here.
   s.author           = { 'TangChunhui' => '1203720671@qq.com' }
   s.source           = { :git => 'https://github.com/TangChunhui/ShumeiSDK_V3.git', :tag => s.version.to_s }
 
-  s.platform         = :ios
-  s.ios.deployment_target = '9.0'
-
-  s.ios.public_header_files = 'Sources/include/SmAntiFraud/SmAntiFraud.h'
+  s.platform         = :ios, '9.0'
   s.source_files = 'Sources/include/SmAntiFraud/SmAntiFraud.h'
   s.frameworks = 'SystemConfiguration', 'Security', 'AdSupport', 'CoreMotion', 'CoreLocation'
   s.libraries = 'resolv', 'z', 'sqlite3.0', 'smantifraud'
-  s.ios.vendored_libraries = 'Sources/libSmAntiFraud.a'
+  s.vendored_libraries = 'Sources/libSmAntiFraud.a'
   s.pod_target_xcconfig    = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' }
   s.user_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' }
-  s.requires_arc = true
-  s.static_framework = true
+  s.requires_arc = false
   
 end
